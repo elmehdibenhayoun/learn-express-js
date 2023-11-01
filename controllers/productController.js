@@ -9,7 +9,7 @@ async function getAllProducts (req, res) {
 
 async function getProductById (req, res) {
 
-    const idP = req.parms.id
+    const idP = req.params.id
     const product = await Products.findById(idP)
     return res.json(product)
 
@@ -24,7 +24,7 @@ async function addProduct (req, res) {
 
 async function deleteProduct (req, res) {
 
-    const idP = req.parms.id
+    const idP = req.params.id
     const product = await Products.findByIdAndDelete(idP)
     return res.json(product)
 
